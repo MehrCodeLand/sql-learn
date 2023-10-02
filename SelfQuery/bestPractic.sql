@@ -23,6 +23,28 @@ create table Employee(
     Firm nvarchar(50) not null ,
 )
 
+-- 1-1
+insert into Person
+values
+('mehrshad' , 'asadi' , 21),
+('aira', 'taghyzadeh', 19),
+('yeganeh', 'bita' ,27)
+
+insert into Student
+values
+( 1, 3223 , 19 ),
+(2 , 2344 , 20 )
+
+insert into Employee
+values
+(1,'goolrang')
+
+
+insert into Manger
+values 
+(1,3028, 5),
+(1,332, 3)
+
 -- 2
 exec create_tables_person_student
 
@@ -43,3 +65,10 @@ where Id in (
     inner join Employee as e
     on e.PersonId = p.PersonId
 )
+
+-- 4 Union
+select * from Student
+union all 
+select * from Manger
+
+
