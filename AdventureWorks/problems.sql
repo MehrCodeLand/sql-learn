@@ -8,3 +8,5 @@ on pass.BusinessEntityID = person.BusinessEntityID
 select color , avg(listPrice) as price , avg(StandardCost) as cost
 from Production.Product
 group by color
+
+
